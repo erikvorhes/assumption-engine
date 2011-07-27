@@ -5,7 +5,7 @@
         dataType: 'json',
         success: assumptionEngine,
         error: noDataFallback
-    })
+    });
     
     function noDataFallback () {
         $('html')
@@ -13,26 +13,29 @@
             .addClass('no-js');
     }
     
-    function makeAssumption (arr) {
-        var item = Math.floor(Math.random() * arr.length);
+    function makeAssumption (arr, len) {
+        var item = Math.floor(Math.random() * len);
         return arr[item];
     }
         
     function assumptionEngine (data) {
-        var assumptions = data['assumptions'] || false;
+        var assumptions = data['assumptions'] || false,
+            assLength;
         
         if (!assumptions) {
             noDataFallback();
             return;
         }
         
+        assLength = assumptions.length;
+        
         $(function () {
             var $toldyou = $('#told-you');
             
             $toldyou.css({'opacity': 0});
             
-            $('form').submit(function () {
-                var assume = makeAssumption(assumptions);
+            $('form').submit(function (ev) {
+                var assume = makeAssumption(assumptions, assLength);
                 
                 if (!$('#assumption').is(':visible')) {
                     $('#assumption').show();
@@ -46,7 +49,7 @@
                             .fadeTo(300, 1);
                     });
                 
-                return false;
+                ev.preventDefault();
             });
         });
     }    
