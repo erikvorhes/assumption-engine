@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <title>Assumption Engine™</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0;">
+    <!--
+        Thanks to @jeremyckahn and @timothymills for helping with some of the 
+        assumptions. They röck!
+    -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mountains+of+Christmas&amp;text=Really%20serious%20typography.">
+    <style>
+        body {
+            background: #fff;
+            font-family: Georgia, serif;
+            padding: 0.5em 2em;
+        }
+        code {
+            font-family: monospace, serif;
+        }
+        #assumption,
+        #told-you {
+            background: #fff;
+        }
+        .no-js form,
+        .js #assumption {
+            display: none;
+        }
+        dfn[title],
+        strong[title] {
+            border-bottom: 1px dotted #666;
+            cursor: help;
+        }
+        .hfj {
+            font-family: 'Ideal Sans', Verlag, Archer, Acropolis, Ziggurat, Requiem, Sentinel, Saracen, Whitney, Gotham, Vitesse, 'Hoefler Text', Georgia, serif;
+        }
+        .serious {
+            font-family: 'Comic Sans MS', 'Comic Sans', 'Chalkboard SE', 'Marker Felt', fantasy;
+        }
+        .really-serious {
+            font-family: 'Mountains of Christmas', Papyrus, cursive;
+            font-size: 2em;
+        }
+        .beta {
+            position: absolute;
+            top: -0.75em;
+            left: 0;
+            border-bottom: 1px solid #b22;
+            background: #ffe;
+            color: #b00;
+            display: block;
+            font-size: 0.375em;
+            margin-left: -4.25em;
+            padding: 2em 4em 0.75em;
+            text-transform: uppercase;
+            -ms-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+        .fork {
+            font-size: 0.75em;
+            padding-top: 4em;
+        }
+        button {
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        var _gaq = _gaq || [];
+        
+        document.documentElement.className = 'js';
+        _gaq.push(['_setAccount', 'UA-600428-11'], ['_setDomainName', '.vorh.es'], ['_trackPageview']);
+    </script>
+<body>
+    <h1>You want an assumption, right? <span class="beta">beta</span></h1>
+    <form action="." method="get">
+        <p><button type="submit">Yes, I want an assumption!</button></p>
+    </form>
+    <div id="assumption">
+        <p>Here you go:</p>
+        <p id="told-you">You have <em>exquisite</em> taste.</p>
+    </div>
+    <p class="fork"><a href="https://github.com/erikvorhes/Assumption-Engine">Fork this on GitHub.</a></p>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+<script src="assumption-engine.js"></script>
+<script>
+    (function (d, t) {
+        var g = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        
+        g.async = true;
+        g.src = ('https' === d.location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g, s);
+    }(document, 'script'));
+</script>
+</body>
+</html>
