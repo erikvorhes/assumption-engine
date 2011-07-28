@@ -13,21 +13,32 @@
             .addClass('no-js');
     }
     
-    function makeAssumption (arr, len) {
-        var item = Math.floor(Math.random() * len);
-        return arr[item];
-    }
-        
     function assumptionEngine (data) {
         var assumptions = data['assumptions'] || false,
-            assLength;
+            assClone;
         
         if (!assumptions) {
             noDataFallback();
             return;
         }
         
-        assLength = assumptions.length;
+        function makeAssumption () {
+            var item,
+                assumption;
+            
+            // Clone the assumptions array & work from it.
+            if (!assClone || !assClone.length) {
+                assClone = assumptions.slice(0);
+            }
+            
+            item = Math.floor(Math.random() * assClone.length);
+            assumption = assClone[item];
+            
+            // Remove the current assumption from the array.
+            assClone.splice(item, 1);
+            
+            return assumption;
+        }
         
         $(function () {
             var $toldyou = $('#told-you');
@@ -35,7 +46,7 @@
             $toldyou.css({'opacity': 0});
             
             $('form').submit(function (ev) {
-                var assume = makeAssumption(assumptions, assLength);
+                var assume = makeAssumption();
                 
                 if (!$('#assumption').is(':visible')) {
                     $('#assumption').show();
