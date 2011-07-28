@@ -51,6 +51,6 @@
         "Just make it animate.",
         "You’ll never need <em>that<\/em>.",
         "Testing is a waste of time.",
-        "undefined<script>setTimeout(function () {var _t=$(\"#told-you\").text() + \" … Gotcha!\"; $(\"#told-you\").text(_t);}, 1000);<\/script>"
+        "undefined<script>setTimeout(function () { var _t = $(\"#told-you\").text() + \" … Gotcha!\"; $(\"#told-you\").text(_t); }, 1000);<\/script>"
     ]
 }
