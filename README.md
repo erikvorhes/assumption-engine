@@ -10,4 +10,4 @@ Want a demo? See it [in action on my site](http://erik.vorh.es/assumes/).
 
 This thing's licensed under the [MIT License](http://en.wikipedia.org/wiki/MIT_License), if that kind of thing matters to you.
 
-<small>You know that the ™ is a joke, right?</small>
+You know that the ™ is a joke, right?
