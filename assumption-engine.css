@@ -29,16 +29,17 @@ strong[title] {
     font-family: 'Mountains of Christmas', Papyrus, cursive;
     font-size: 2em;
 }
-.beta {
+.version {
     position: absolute;
-    top: -0.75em;
+    top: -0.5em;
     left: 0;
+    z-index: 0;
     border-bottom: 1px solid #b22;
     background: #ffe;
     color: #b00;
     display: block;
     font-size: 0.375em;
-    margin-left: -4.25em;
+    margin-left: -4.5em;
     padding: 2em 4em 0.75em;
     text-transform: uppercase;
     -ms-transform: rotate(-45deg);
