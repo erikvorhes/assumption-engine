@@ -1,0 +1,56 @@
+body {
+    background: #fff;
+    font-family: Georgia, serif;
+    padding: 0.5em 2em;
+}
+code {
+    font-family: monospace, serif;
+}
+#assumption,
+#told-you {
+    background: #fff;
+}
+.no-js form,
+.js #assumption {
+    display: none;
+}
+dfn[title],
+strong[title] {
+    border-bottom: 1px dotted #666;
+    cursor: help;
+}
+.hfj {
+    font-family: 'Ideal Sans', Verlag, Archer, Acropolis, Ziggurat, Requiem, Sentinel, Saracen, Whitney, Gotham, Vitesse, 'Hoefler Text', Georgia, serif;
+}
+.serious {
+    font-family: 'Comic Sans MS', 'Comic Sans', 'Chalkboard SE', 'Marker Felt', fantasy;
+}
+.really-serious {
+    font-family: 'Mountains of Christmas', Papyrus, cursive;
+    font-size: 2em;
+}
+.beta {
+    position: absolute;
+    top: -0.75em;
+    left: 0;
+    border-bottom: 1px solid #b22;
+    background: #ffe;
+    color: #b00;
+    display: block;
+    font-size: 0.375em;
+    margin-left: -4.25em;
+    padding: 2em 4em 0.75em;
+    text-transform: uppercase;
+    -ms-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.fork {
+    font-size: 0.75em;
+    padding-top: 4em;
+}
+button {
+    cursor: pointer;
+}

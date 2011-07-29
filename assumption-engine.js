@@ -62,6 +62,16 @@
                 
                 ev.preventDefault();
             });
+            
+            function gotcha () {
+                function haha () {
+                    var _t = $toldyou.text() + ' … Gotcha!';
+                    $toldyou.text(_t);
+                }
+                setTimeout(haha, 600);
+            }
+            
+            window.assumptionGotcha = gotcha;
         });
     }    
     
