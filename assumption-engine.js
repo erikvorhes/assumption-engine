@@ -1,7 +1,7 @@
 (function (window, $) {
     
     $.ajax({ // Change the URL value to what works for you, naturally.
-        url: (window.location.hostname === 'erik.vorh.es' ? 'git/assumptions.json' : 'assumptions.json'),
+        url: 'assumptions.json',
         dataType: 'json',
         success: assumptionEngine,
         error: noDataFallback
