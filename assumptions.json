@@ -60,6 +60,6 @@
         "Just ship it.",
         "It’ll take three days.",
         "It’s not broken.  The user just needs to be educated.",
-        "<div style=\"background:#000000;width:540px;height:334px\"><embed flashVars=\"playerVars=showStats=no|autoPlay=yes|\" src=\"http:\/\/www.metacafe.com\/fplayer\/sy-1473689248\/rick_astley_never_gonna_give_you_up_official_music_video.swf\" width=\"540\" height=\"334\" wmode=\"transparent\" allowFullScreen=\"true\" allowScriptAccess=\"always\" name=\"Metacafe_sy-1473689248\" pluginspage=\"http:\/\/www.macromedia.com\/go\/getflashplayer\" type=\"application\/x-shockwave-flash\"><\/embed><\/div>"
+        "<iframe width=\"425\" height=\"349\" src=\"http:\/\/www.youtube.com\/embed\/dQw4w9WgXcQ\" frameborder=\"0\" allowfullscreen><\/iframe>"
     ]
 }
