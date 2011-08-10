@@ -2,6 +2,7 @@ body {
     background: #fff;
     font-family: Georgia, serif;
     padding: 0.5em 2em;
+    -webkit-text-size-adjust: 100%;
 }
 code {
     font-family: monospace, serif;
