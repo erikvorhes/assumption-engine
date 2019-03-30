@@ -18,6 +18,7 @@
         }
 
         let assClone = [];
+        const assEl = document.getElementById('told-you');
 
         const makeAssumption = () => {
           if (!assClone.length) {
@@ -28,13 +29,12 @@
           const assumption = assClone[item];
           assClone.splice(item, 1);
 
-          return assumption;
+          assEl.innerHTML =  assumption;
         };
 
         const form = document.querySelector('form');
-        const assEl = document.getElementById('told-you');
         form.addEventListener('submit', ev => {
-          assEl.innerHTML = makeAssumption();
+          makeAssumption();
           ev.preventDefault();
         });
 
