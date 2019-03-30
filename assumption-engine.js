@@ -19,8 +19,9 @@
 
         let assClone = [];
         const assEl = document.getElementById('told-you');
-
-        const makeAssumption = () => {
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (ev) => {
+          ev.preventDefault();
           if (!assClone.length) {
             assClone = assumptions.slice(0);
           }
@@ -30,15 +31,7 @@
           assClone.splice(item, 1);
 
           assEl.innerHTML =  assumption;
-        };
-
-        const form = document.querySelector('form');
-        form.addEventListener('submit', ev => {
-          makeAssumption();
-          ev.preventDefault();
         });
-
-        makeAssumption();
       })
       .catch(err => {
         fallback();
