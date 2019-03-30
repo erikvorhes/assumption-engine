@@ -37,6 +37,8 @@
           assEl.innerHTML = makeAssumption();
           ev.preventDefault();
         });
+
+        makeAssumption();
       })
       .catch(err => {
         fallback();
