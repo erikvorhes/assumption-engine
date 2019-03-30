@@ -1,58 +1,54 @@
 body {
-    background: #fff;
-    font-family: Georgia, serif;
-    padding: 0.5em 2em;
-    -webkit-text-size-adjust: 100%;
+  background: #fff;
+  font-family: Georgia, serif;
+  font-size: 100%;
+  line-height: 1.2;
+  padding: .5rem 2rem;
+  text-size-adjust: 100%;
 }
 code {
-    font-family: monospace, serif;
+  font-family: monospace, serif;
 }
-#assumption,
-#told-you {
-    background: #fff;
+
+.no-js form {
+  display: none;
 }
-.no-js form,
-.js #assumption {
-    display: none;
-}
+
 dfn[title],
 strong[title] {
-    border-bottom: 1px dotted #666;
-    cursor: help;
+  border-bottom: calc(1em / 16) dotted #666;
+  cursor: help;
 }
+
 .hfj {
-    font-family: 'Ideal Sans', Verlag, Archer, Acropolis, Ziggurat, Requiem, Sentinel, Saracen, Whitney, Gotham, Vitesse, 'Hoefler Text', Georgia, serif;
+  font-family: 'Ideal Sans', Verlag, Archer, Acropolis, Ziggurat, Requiem, Sentinel, Saracen, Whitney, Gotham, Vitesse, 'Hoefler Text', Georgia, serif;
 }
+
 .serious {
-    font-family: 'Comic Sans MS', 'Comic Sans', 'Chalkboard SE', 'Marker Felt', fantasy;
+  font-family: 'Comic Sans MS', 'Comic Sans', 'Chalkboard SE', 'Marker Felt', fantasy;
 }
+
 .really-serious {
-    font-family: 'Mountains of Christmas', Papyrus, cursive;
-    font-size: 2em;
+  font-family: 'Mountains of Christmas', Papyrus, cursive;
+  font-size: 2rem;
 }
+
 .version {
-    position: absolute;
-    top: -0.5em;
-    left: 0;
-    z-index: 0;
-    border-bottom: 1px solid #b22;
-    background: #ffe;
-    color: #b00;
-    display: block;
-    font-size: 0.375em;
-    margin-left: -4.5em;
-    padding: 2em 4em 0.75em;
-    text-transform: uppercase;
-    -ms-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
+  position: absolute;
+  top: -0.5em;
+  left: 0;
+  z-index: 0;
+  border-bottom: calc(1em / 16) solid #b22;
+  background: #ffe;
+  color: #b00;
+  font-size: .375rem;
+  margin-left: -4.5em;
+  padding: 2em 4em .75em;
+  text-transform: uppercase;
+  transform: rotate(-45deg);
 }
+
 .fork {
-    font-size: 0.75em;
-    padding-top: 4em;
-}
-button {
-    cursor: pointer;
+  font-size: .75rem;
+  padding-top: 4em;
 }

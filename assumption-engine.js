@@ -1,78 +1,49 @@
-(function (window, $) {
-    
-    $.ajax({ // Change the URL value to what works for you, naturally.
-        url: 'assumptions.json',
-        dataType: 'json',
-        success: assumptionEngine,
-        error: noDataFallback
-    });
-    
-    function noDataFallback () {
-        $('html')
-            .removeClass('js')
-            .addClass('no-js');
-    }
-    
-    function assumptionEngine (data) {
-        var assumptions = data['assumptions'] || false,
-            assClone;
-        
+(function () {
+  function fallback() {
+    document.documentElement.className = 'no-js';
+  }
+
+  try {
+    fetch('assumptions.json')
+      .then(res => {
+        if (res.ok) {
+          return res.json();
+        }
+        throw new Error('Bad network response.');
+      })
+      .then(json => {
+        const assumptions = json.assumptions || false;
         if (!assumptions) {
-            noDataFallback();
-            return;
+          throw new Error('No assumptions.');
         }
-        
-        function makeAssumption () {
-            var item,
-                assumption;
-            
-            // Clone the assumptions array & work from it.
-            if (!assClone || !assClone.length) {
-                assClone = assumptions.slice(0);
-            }
-            
-            item = Math.floor(Math.random() * assClone.length);
-            assumption = assClone[item];
-            
-            // Remove the current assumption from the array.
-            assClone.splice(item, 1);
-            
-            return assumption;
-        }
-        
-        $(function () {
-            var $toldyou = $('#told-you');
-            
-            $toldyou.css({'opacity': 0});
-            
-            $('form').submit(function (ev) {
-                var assume = makeAssumption();
-                
-                if (!$('#assumption').is(':visible')) {
-                    $('#assumption').show();
-                }
-                
-                $toldyou
-                    .stop()
-                    .fadeTo(300, 0, function () {
-                        $(this)
-                            .html(assume)
-                            .fadeTo(300, 1);
-                    });
-                
-                ev.preventDefault();
-            });
-            
-            function gotcha () {
-                function haha () {
-                    var _t = $toldyou.text() + ' … Gotcha!';
-                    $toldyou.text(_t);
-                }
-                setTimeout(haha, 600);
-            }
-            
-            window.assumptionGotcha = gotcha;
+
+        let assClone = [];
+
+        const makeAssumption = () => {
+          if (!assClone.length) {
+            assClone = assumptions.slice(0);
+          }
+
+          const item = Math.floor(Math.random() * assClone.length);
+          const assumption = assClone[item];
+          assClone.splice(item, 1);
+
+          return assumption;
+        };
+
+        const form = document.querySelector('form');
+        const assEl = document.getElementById('told-you');
+        form.addEventListener('submit', ev => {
+          assEl.innerHTML = makeAssumption();
+          ev.preventDefault();
         });
-    }    
-    
-}(this, jQuery));
+      })
+      .catch(err => {
+        fallback();
+        console.log('Something went wrong: ', err.message);
+      });
+  } catch (err) {
+    fallback();
+    console && console.log('Something went wrong: ', err.message);
+  }
+}());
