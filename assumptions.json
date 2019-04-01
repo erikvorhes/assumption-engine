@@ -1,5 +1,6 @@
 {
     "assumptions": [
+        "April Fools’ Day is super fun.",
         "WebGL must work in IE6. <em>Without<\/em> Chrome Frame.",
         "Native <code>&lt;video&gt;<\/code> in IE6.",
         "Unskippable five-minute Flash intro. That works on iPad.",
