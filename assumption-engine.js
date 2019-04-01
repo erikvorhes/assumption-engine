@@ -1,6 +1,7 @@
 (function () {
-  function fallback() {
+  function fallback(message) {
     document.documentElement.className = 'no-js';
+    console && console.log('Something went wrong: ', message);
   }
 
   try {
@@ -9,6 +10,7 @@
         if (res.ok) {
           return res.json();
         }
+
         throw new Error('Bad network response.');
       })
       .then(json => {
@@ -34,11 +36,9 @@
         });
       })
       .catch(err => {
-        fallback();
-        console.log('Something went wrong: ', err.message);
+        fallback(err.message);
       });
   } catch (err) {
-    fallback();
-    console && console.log('Something went wrong: ', err.message);
+    fallback(err.message);
   }
 }());
