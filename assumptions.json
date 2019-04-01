@@ -1,6 +1,10 @@
 {
     "assumptions": [
         "April Fools’ Day is super fun.",
+        "Web technology will remain unchanged after 2012.",
+        "You will work harder than you ever have before.",
+        "Work–life balance.",
+        "Google isn’t evil.",
         "WebGL must work in IE6. <em>Without<\/em> Chrome Frame.",
         "Native <code>&lt;video&gt;<\/code> in IE6.",
         "Unskippable five-minute Flash intro. That works on iPad.",

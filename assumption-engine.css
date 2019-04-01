@@ -58,3 +58,8 @@ strong[title] {
   font-size: .75rem;
   padding-top: 4em;
 }
+
+#assumption p:first-child,
+.fork {
+  font-style: italic;
+}
