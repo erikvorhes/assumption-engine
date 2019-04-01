@@ -1,6 +1,8 @@
 :root {
   font-family: serif;
+  font-kerning: normal;
   font-size: 125%;
+  font-variant-ligatures: common-ligatures;
   text-size-adjust: 100%;
 }
 
