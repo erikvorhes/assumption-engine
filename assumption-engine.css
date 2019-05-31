@@ -11,8 +11,15 @@ body {
   line-height: 1.25;
   padding: .5rem 2rem;
 }
+
 code {
   font-family: monospace, serif;
+}
+
+button {
+  font-size: inherit;
+  border-radius: .25rem;
+  padding: .5rem .75rem;
 }
 
 .no-js form {
